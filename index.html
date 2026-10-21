@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slikaj z mano</title>
+  <meta name="description" content="Slikaj z mano: sončni zahodi in vzhodi s hribov okoli Ljubljane in drugod po Sloveniji. Fotografije Gregorja Raičevića.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Spectral:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#vsebina" data-i18n="skip">Skoči na vsebino</a>
+
+  <header class="top">
+    <a class="mark" href="#"><img class="mark-icon" src="favicon.svg" alt="">Slikaj z mano</a>
+    <nav class="nav" data-i18n-label="nav_label">
+      <a href="#albumi" data-i18n="nav_albums">Albumi</a>
+      <a href="#o-meni" data-i18n="nav_about">O meni</a>
+      <a href="#kontakt" data-i18n="nav_contact">Kontakt</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Jezik / Language">
+      <button type="button" data-lang="sl" aria-pressed="true">SL</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <main id="vsebina">
+    <div id="home">
+      <section class="hero" data-i18n-label="hero_label">
+        <div id="heroMedia"></div>
+        <p class="hero-sign" aria-hidden="true">Slikaj z mano</p>
+        <a class="hero-cap" id="heroCap" href="#"></a>
+      </section>
+
+      <section id="albumi" class="section wrap">
+        <div class="sec-head">
+          <h2 data-i18n="albums_title">Albumi</h2>
+          <p class="count-note" id="albumCount"></p>
+        </div>
+        <div class="filters" id="filters" role="group" data-i18n-label="filter_label"></div>
+        <ul class="albums" id="albums"></ul>
+        <button type="button" class="more-btn" id="moreBtn" data-i18n="more">Pokaži več albumov</button>
+      </section>
+
+      <section id="o-meni" class="section wrap about">
+        <h2 data-i18n="about_title">O meni</h2>
+        <div id="aboutBody"></div>
+      </section>
+
+      <section id="kontakt" class="section wrap">
+        <h2 data-i18n="contact_title">Kontakt</h2>
+        <p class="lede" id="contactText"></p>
+        <a class="mail" id="mail" href="#"></a>
+      </section>
+    </div>
+
+    <article id="album" class="album-page wrap" hidden></article>
+  </main>
+
+  <footer class="foot wrap">
+    <p id="footText"></p>
+  </footer>
+
+  <dialog class="lb" id="lightbox">
+    <div class="lb-inner">
+      <div class="lb-media" id="lbMedia"></div>
+      <p class="lb-cap" id="lbCap"></p>
+    </div>
+    <button type="button" class="lb-btn lb-close" id="lbClose">×</button>
+    <button type="button" class="lb-btn lb-prev" id="lbPrev">‹</button>
+    <button type="button" class="lb-btn lb-next" id="lbNext">›</button>
+  </dialog>
+
+  <script src="content.js"></script>
+  <script src="albums.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

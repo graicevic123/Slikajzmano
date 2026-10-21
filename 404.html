@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8">
+  <title>Slikaj z mano</title>
+  <script>
+    // Stare povezave z Bloggerja preusmeri na nove albume
+    (function () {
+      var p = location.pathname, m;
+      if ((m = p.match(/^\/(\d{4})\/(\d{2})\/([^/]+)\.html$/))) {
+        location.replace('/#album/' + m[1] + '-' + m[2] + '-' + m[3]);
+      } else if ((m = p.match(/^\/search\/label\/([^/]+)/))) {
+        location.replace('/#oznaka/' + m[1]);
+      } else {
+        location.replace('/');
+      }
+    })();
+  </script>
+</head>
+<body><p><a href="/">Slikaj z mano</a></p></body>
+</html>
