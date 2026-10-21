@@ -3,7 +3,7 @@
 
 window.SITE = {
   author: 'Gregor Raičević',
-  email: 'info@slikajzmano.com',
+  email: 'gregor.raicevic@gmail.com',
   description: { sl: 'Blog namenjen slikanju', en: 'A blog about photography' },
 
   // Povezava z praznim url se ne prikaže
